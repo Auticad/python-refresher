@@ -1,8 +1,8 @@
 from typing import List
 
 
-class Student:
-    def __init__(self, name: str, grades: List[int] = None):
+class Student: # type: ignore
+    def __init__(self, name: str, grades: List[int] = None): # type: ignore
         self.name = name
         self.grades = grades or []
 

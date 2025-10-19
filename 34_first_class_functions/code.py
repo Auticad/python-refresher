@@ -27,7 +27,7 @@ print(result)
 # -- searching with first-class functions --
 
 
-def search(sequence, expected, finder):
+def search(sequence, expected, finder): # type: ignore
     for elem in sequence:
         if finder(elem) == expected:
             return elem
@@ -50,7 +50,7 @@ print(search(friends, "Bob Smith", get_friend_name))
 # -- using lambdas since this can be simple enough --
 
 
-def search(sequence, expected, finder):
+def search(sequence, expected, finder): # type: ignore
     for elem in sequence:
         if finder(elem) == expected:
             return elem

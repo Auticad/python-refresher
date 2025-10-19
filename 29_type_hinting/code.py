@@ -5,7 +5,7 @@ def list_avg(sequence: list) -> float:
 # -- Type hinting classes --
 
 
-class Book:
+class Book: # type: ignore
     def __init__(self, name: str, page_count: int):
         self.name = name
         self.page_count = page_count
@@ -27,9 +27,9 @@ class BookShelf:
 # Key benefit is now you'll get told if you pass in the wrong thing...
 
 book = Book(
-    "Harry Potter", "352"
+    "Harry Potter", "352" # type: ignore
 )  # Suggests this is incorrect if you have a tool that will analyse your code (e.g. PyCharm or Pylint)
-shelf = BookShelf(book)  # Suggests this is incorrect too
+shelf = BookShelf(book)  # type: ignore # Suggests this is incorrect too
 # Type hinting is that: hints. It doesn't stop your code from working... although it can save you at times!
 
 # -- Hinting the current object --

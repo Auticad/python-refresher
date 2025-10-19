@@ -8,21 +8,21 @@ add(2, 3)  # 5
 # -- If a function doesn't have parameter, you can't give it arguments --
 
 
-def say_hello():
+def say_hello(): # type: ignore
     print("Hello!")
 
 
-say_hello("Bob")  # Error
+#say_hello("Bob")  # type: ignore # Error
 
 # -- But if you add a parameter, then you must give it an argument --
 
 
-def say_hello(name):
+def say_hello(name): # type: ignore
     print(f"Hello, {name}!")
 
 
 say_hello("Bob")
-say_hello()  # Error, needs an argument
+#say_hello()  # type: ignore # Error, needs an argument
 
 # -- Keyword arguments --
 # To make things clearer, in Python you can give keyword arguments.

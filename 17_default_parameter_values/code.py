@@ -1,10 +1,10 @@
-def add(x, y=3):
+def add(x, y=3): # pyright: ignore[reportRedeclaration]
     print(x + y)
 
 
 add(5)  # 8
 add(5, 8)  # 13
-add(y=3)  # Error, missing x
+add(5,y=3)  # Error, missing x
 
 # -- Order of default parameters --
 

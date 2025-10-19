@@ -11,7 +11,7 @@ print(average(student["grades"]))
 # print(student.average()) ?
 
 
-class Student:
+class Student: # type: ignore
     def __init__(self):
         self.name = "Rolf"
         self.grades = (89, 90, 93, 78, 90)
@@ -28,7 +28,7 @@ print(student.average())
 # -- Parameters in __init__ --
 
 
-class Student:
+class Student: # type: ignore
     def __init__(self, name, grades):
         self.name = name
         self.grades = grades

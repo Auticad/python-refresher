@@ -1,7 +1,7 @@
 user = {"username": "jose", "access_level": "guest"}
 
 
-def make_secure(func):
+def make_secure(func): # type: ignore
     def secure_function():
         if user["access_level"] == "admin":
             return func()
@@ -12,7 +12,7 @@ def make_secure(func):
 
 
 @make_secure
-def get_admin_password():
+def get_admin_password(): # type: ignore
     return "1234"
 
 

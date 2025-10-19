@@ -4,7 +4,7 @@ import functools
 user = {"username": "jose", "access_level": "guest"}
 
 
-def make_secure(func):
+def make_secure(func): # type: ignore
     @functools.wraps(func)
     def secure_function(panel):
         if user["access_level"] == "admin":
@@ -16,7 +16,7 @@ def make_secure(func):
 
 
 @make_secure
-def get_password(panel):
+def get_password(panel): # type: ignore
     if panel == "admin":
         return "1234"
     elif panel == "billing":

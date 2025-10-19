@@ -1,4 +1,4 @@
-class Person:
+class Person: # type: ignore
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -11,7 +11,7 @@ print(bob)  # Not the nicest thing to read!
 # The goal of __str__ is to return a nice, easy to read string for end users.
 
 
-class Person:
+class Person: # type: ignore
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -36,7 +36,7 @@ class Person:
         # I'm adding the < > just so it's clear that this is an object we're printing out!
         return (
             f"<Person({self.name!r}, {self.age})>"
-        )  # !r calls the __repr__ method of the thing.
+        )  # !r calls the __repr__ method of the thing => <Person('Bob', 35)>
 
 
 bob = Person("Bob", 35)

@@ -1,21 +1,24 @@
-friend_ages = {"Rolf": 24, "Adam": 30, "Anne": 27}
+# friend_ages = {"Rolf": 24, "Adam": 30, "Anne": 27}
 
-friend_ages["Bob"] = 20
+# friend_ages["Bob"] = 20
 
-print(friend_ages)  # {'Rolf': 24, 'Adam': 30, 'Anne': 27, 'Bob': 20}
-print(friend_ages["Bob"])
+# print(friend_ages)  # {'Rolf': 24, 'Adam': 30, 'Anne': 27, 'Bob': 20}
+# print(friend_ages["Bob"])
 
-# -- List of dictionaries --
+# # -- List of dictionaries --
 
-friends = [
-    {"name": "Rolf Smith", "age": 24},
-    {"name": "Adam Wool", "age": 30},
-    {"name": "Anne Pun", "age": 27},
-]
+# friends = [
+#     {"name": "Rolf Smith", "age": 24},
+#     {"name": "Adam Wool", "age": 30},
+#     {"name": "Anne Pun", "age": 27},
+# ]
 
-print(friends)
+# print(friends)
 
 # -- Iteration --
+
+from turtle import st
+
 
 student_attendance = {"Rolf": 96, "Bob": 80, "Anne": 100}
 
@@ -30,7 +33,7 @@ for student, attendance in student_attendance.items():
 # -- Using the `in` keyword --
 
 if "Bob" in student_attendance:
-    print(f"Bob: {student_attendance[student]}")
+    print(f"Bob: {student_attendance[student]}") # errato student contiene la chiave dell'ultimo loop del ciclo for precedente
 else:
     print("Bob isn't a student in this class!")
 

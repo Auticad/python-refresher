@@ -16,6 +16,7 @@ class Device:
 
 # We don't want to add printer-specific stuff to Device, so...
 
+#===========EREDITARIETA'===========
 
 class Printer(Device):
     def __init__(self, name, connected_by, capacity):
@@ -40,4 +41,4 @@ print(printer)
 printer.print(50)
 print(printer)
 printer.disconnect()
-printer.print(30)  # Error
+#printer.print(30)  # Error

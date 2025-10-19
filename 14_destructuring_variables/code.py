@@ -35,6 +35,7 @@ print(name, profession)  # Bob Mechanic
 # -- Collecting values --
 
 head, *tail = [1, 2, 3, 4, 5]
+# * operatore di unpacking (*) per assegnare gli elementi della lista a più variabili.
 
 print(head)  # 1
 print(tail)  # [2, 3, 4, 5]

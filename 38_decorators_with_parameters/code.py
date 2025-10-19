@@ -3,7 +3,7 @@ import functools
 user = {"username": "anna", "access_level": "user"}
 
 
-def make_secure(func):
+def make_secure(func): # type: ignore
     @functools.wraps(func)
     def secure_function(*args, **kwargs):
         if user["access_level"] == "admin":
@@ -15,12 +15,12 @@ def make_secure(func):
 
 
 @make_secure
-def get_admin_password():
+def get_admin_password(): # type: ignore
     return "admin: 1234"
 
 
 @make_secure
-def get_dashboard_password():
+def get_dashboard_password(): # type: ignore
     return "user: user_password"
 
 

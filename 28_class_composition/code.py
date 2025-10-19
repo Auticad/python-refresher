@@ -1,7 +1,7 @@
 # Something I see a lot, but you SHOULDN'T DO
 
 
-class BookShelf:
+class BookShelf: # type: ignore
     def __init__(self, quantity):
         self.quantity = quantity
 
@@ -12,7 +12,7 @@ class BookShelf:
 shelf = BookShelf(300)
 
 
-class Book(BookShelf):
+class Book(BookShelf): # type: ignore
     def __init__(self, name, quantity):
         super().__init__(quantity)
         self.name = name

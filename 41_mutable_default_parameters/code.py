@@ -1,7 +1,7 @@
 from typing import List
 
 
-class Student:
+class Student: # type: ignore
     def __init__(self, name: str, grades: List[int] = []):  # This is bad!
         self.name = name
         self.grades = grades
@@ -28,7 +28,7 @@ from typing import List
 
 
 class Student:
-    def __init__(self, name: str, grades: List[int] = None):
+    def __init__(self, name: str, grades: List[int] = None): # type: ignore
         self.name = name
         self.grades = grades or []  # New list created if one isn't passed
 
@@ -36,7 +36,7 @@ class Student:
         self.grades.append(result)
 
 
-bob = Student("Bob")
+bob = Student("Bob", [60, 20])
 rolf = Student("Rolf")
 bob.take_exam(90)
 print(bob.grades)
